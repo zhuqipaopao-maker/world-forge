@@ -48,7 +48,7 @@ function readBriefLine() {
 
 function findRef() {
   if (opt.ref) return opt.ref;
-  const cands = [path.join(HERE, '../../reference/street-sheet.jpg'), path.join(os.homedir(), '.claude/skills/world-forge/assets/reference/street-sheet.jpg'),
+  const cands = [path.join(HERE, 'reference/street-sheet.jpg'), path.join(HERE, '../../reference/street-sheet.jpg'), path.join(os.homedir(), '.claude/skills/world-forge/assets/reference/street-sheet.jpg'),
     path.join(os.homedir(), '.codex/skills/world-forge/assets/reference/street-sheet.jpg'), path.join(os.homedir(), '.agents/skills/world-forge/assets/reference/street-sheet.jpg')];
   const hit = cands.find(f => fs.existsSync(f));
   if (!hit) { console.error('no reference sheet found: pass --ref <path to assets/reference/street-sheet.jpg>'); process.exit(2); }

@@ -47,7 +47,8 @@ Do not ask about the palette, the materials, the controls or the code structure.
 
 ### 0. Set up (about 5 minutes)
 ```bash
-cp -R ~/.claude/skills/world-forge/assets/template <project> && cd <project>
+# SKILL_DIR = the folder this SKILL.md is in (~/.claude/skills/world-forge, ~/.codex/skills/world-forge, or a plugin cache path)
+cp -R "$SKILL_DIR/assets/template" <project> && cp -R "$SKILL_DIR/assets/reference" <project>/tools/reference && cd <project>
 npm install            # three, esbuild, playwright-core (uses the system Chrome)
 git init -q && (git config user.name >/dev/null || git config user.name "world-forge") \
   && (git config user.email >/dev/null || git config user.email "world-forge@localhost") \
