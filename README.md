@@ -18,7 +18,7 @@
 |---|---|
 | ![松林小站](media/pine-aerial.jpg) | ![地铁站](media/metro-vending.jpg) |
 | 雪夜林间的小车站。原木小屋、信号楼、道口、废弃车厢，还有一列进站的货车。 | 末班车后的地铁站，出站后是一条下着雨的街。 |
-| **[▶ 在线试玩](https://zhuqipaopao-maker.github.io/world-forge/pine-halt/)** | **[▶ 在线试玩](https://zhuqipaopao-maker.github.io/world-forge/night-metro/)** |
+| **[▶ 在线试玩](https://zhuqipaopao-maker.github.io/world-forge/pine-halt/)** | **[▶ 在线试玩](https://zhuqipaopao-maker.github.io/world-forge/night-metro/)** · [直接看出站街道](https://zhuqipaopao-maker.github.io/world-forge/night-metro/?scene=street) |
 
 ![原木小屋](media/pine-loghut.jpg)
 
