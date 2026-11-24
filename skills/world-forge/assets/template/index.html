@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" href="data:,">
+<title>GAME_TITLE</title>
+<style>
+  :root { --ink:#e9e4da; --dim:#a39d92; --accent:#ffb36b; --bg:#0b0d10; }
+  html,body { margin:0; height:100%; background:var(--bg); color:var(--ink); font:15px/1.4 ui-sans-serif,system-ui,sans-serif; overflow:hidden; }
+  [hidden] { display:none !important; }  /* id rules below set display; keep the hidden attribute working */
+  #app { position:fixed; inset:0; }
+  canvas { display:block; }
+  #boot { position:fixed; inset:0; z-index:100; display:grid; place-items:center; background:var(--bg); transition:opacity .7s; }
+  #boot.done { opacity:0; pointer-events:none; }
+  #boot .bar { width:min(320px,70vw); height:2px; background:#ffffff18; margin-top:14px; }
+  #boot-fill { height:100%; width:0; background:var(--accent); transition:width .2s; }
+  #boot-msg { color:var(--dim); letter-spacing:.08em; text-transform:uppercase; font-size:12px; }
+  #title { position:fixed; inset:0; z-index:50; display:flex; flex-direction:column; justify-content:flex-end; padding:8vh 7vw; cursor:pointer;
+           background:linear-gradient(transparent 40%, #000a); }
+  #title.hidden { display:none; }
+  #title h1 { margin:0; font-size:clamp(40px,8vw,110px); font-weight:800; letter-spacing:-.02em; }
+  #title p { margin:.4em 0 0; color:var(--dim); }
+  #hud { position:fixed; inset:0; z-index:40; pointer-events:none; }
+  #hud .obj { position:absolute; left:28px; top:24px; font-size:13px; letter-spacing:.06em; text-transform:uppercase; color:var(--ink); text-shadow:0 1px 2px #000; }
+  #hud .toast { position:absolute; left:50%; bottom:18%; transform:translateX(-50%); opacity:0; transition:opacity .3s; text-shadow:0 1px 2px #000; }
+  #hud .toast.on { opacity:1; }
+  #hud .cross { position:absolute; left:50%; top:50%; width:4px; height:4px; margin:-2px; border-radius:50%; background:#fff9; }
+  #end { position:fixed; inset:0; z-index:60; display:grid; place-items:center; font-size:48px; font-weight:800; background:#0008; }
+  #pause { position:fixed; inset:0; z-index:55; display:grid; place-items:center; font-size:20px; letter-spacing:.1em; text-transform:uppercase; background:#0006; }
+  #fatal { position:fixed; left:16px; right:16px; bottom:16px; z-index:200; padding:12px; background:#400; color:#fdd; font:12px/1.4 ui-monospace,monospace; white-space:pre-wrap; }
+</style>
+</head>
+<body>
+<div id="app"></div>
+<div id="boot"><div><div id="boot-msg">Loading</div><div class="bar"><div id="boot-fill"></div></div></div></div>
+<div id="title"><h1>GAME_TITLE</h1><p>Click to begin</p></div>
+<div id="hud" hidden></div>
+<div id="end" hidden></div>
+<div id="pause" hidden>Paused — click to resume</div>
+<script type="module" src="./dist/game.js"></script>
+</body>
+</html>

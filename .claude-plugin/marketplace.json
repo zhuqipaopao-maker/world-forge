@@ -1,0 +1,18 @@
+{
+  "name": "world-forge",
+  "owner": { "name": "zhuqipaopao-maker" },
+  "metadata": {
+    "description": "Build small, high-fidelity 3D browser worlds with a screenshot-and-critic loop.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "world-forge",
+      "description": "Build a small, high-fidelity 3D browser game or explorable world (Three.js, one HTML file, everything generated in code) through a long screenshot → critique → fix loop.",
+      "version": "1.0.0",
+      "source": "./",
+      "strict": false,
+      "skills": ["./skills/world-forge"]
+    }
+  ]
+}

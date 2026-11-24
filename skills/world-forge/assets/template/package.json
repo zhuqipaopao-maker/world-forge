@@ -1,0 +1,18 @@
+{
+  "name": "world-forge-game",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node tools/dev.mjs",
+    "build": "node tools/build.mjs",
+    "shot": "node tools/shot.mjs",
+    "bench": "node tools/bench.mjs"
+  },
+  "dependencies": {
+    "three": "0.170.0"
+  },
+  "devDependencies": {
+    "esbuild": "0.24.0",
+    "playwright-core": "1.49.1"
+  }
+}
